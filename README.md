@@ -1,9 +1,8 @@
 # ChatGPT on Graphics
 
-### Name0: YOUR NAME HERE
-### Name1: TABLE_BUDDY NAME HERE
-### Name2: TABLE_BUDY+ NAME HERE 
-### Name3: TABLE_BUDY+ NAME HERE (if applicable, delete this line if not)
+### Name0: Jaime S.
+### Name1: Shreya Roy
+### Name2: Nelson So 
 
 ---
 
@@ -33,7 +32,17 @@ You can find ChatGPT here: <https://chat.openai.com/chat>
 ### Your Prompt
 Provide below the first description you gave ChatGPT:
 
-YOUR ANSWER HERE
+make a file with exactly these functions: make_bezier, make_hermite, generate_curve_coefs, make_translate, make_scale, make_rotX, make_rotY, make_rotZ, print_matrix ,ident, matrix_mult, new_matrix
+
+ok, write code in python to fulfill these requirements:
+Write code to work with transformation matrices:
+
+create a translation matrix
+create a scale matrix
+create a rotation matrix about the x-axis
+create a rotation matrix about the y-axis
+create a rotation matrix about the z-axis
+
 
 ### The Code
 Crate a folder in this repository called __0-program__ containing all the relevant code initially created by ChatGPT.
@@ -44,12 +53,53 @@ Answer the Following Questions after seeing the initial program.
 #### Question 0
 Overall, how well did ChatGPT do?
 
-YOUR ANSWER HERE
+"ChatGPT was able to write all the matrix related code extremely well. I noticed however sometimes in its code it would repeat code segments
+for no reason. Below is an obvious example. Other times for the actual displaying graphics part, there would be times where chatGPT would 
+just hang and exit its stream. There was also a point where chatGPT right up refused to give us code because it wanted to give us an 'outline' 
+of what we should do for the graphics engine. It also reminded me why I hate reading Python code (or any untyped language for that matter).
+
+```python
+  16   │ def make_bezier():  
+  17   │     # Bezier matrix  
+  18   │     return [[-1, 3, -3, 1],  
+  19   │             [3, -6, 3, 0],  
+  20   │             [-3, 3, 0, 0],  
+  21   │             [1, 0, 0, 0]]  
+  22   │   
+  23   │  
+  24   │ def make_hermite():  
+  25   │     # Hermite matrix  
+  26   │     return [[2, -2, 1, 1],  
+  27   │             [-3, 3, -2, -1],  
+  28   │             [0, 0, 1, 0],  
+  29   │             [1, 0, 0, 0]]  
+  30   │   
+  31   │   
+  32   │ def generate_curve_coefs(p0, p1, p2, p3, curve_type):  
+  33   │     if curve_type == "hermite":  
+  34   │         result = [[2, -3, 0, 1],  
+  35   │                   [-2, 3, 0, 0],  
+  36   │                   [1, -2, 1, 0],  
+  37   │                   [1, -1, 0, 0]]  
+  38   │     elif curve_type == "bezier":  
+  39   │         result = [[-1, 3, -3, 1],  
+  40   │                   [3, -6, 3, 0],  
+  41   │                   [-3, 3, 0, 0],  
+  42   │                   [1, 0, 0, 0]]  
+  43   │     else:  
+  44   │         print("Invalid curve type")  
+  45   │         return None  
+  46   │       
+```
+"
+by Jaime
 
 #### Question 1
 What did ChatGPT get right?
 
-YOUR ANSWER HERE
+"ChatGPT was able to save both ASCII and binary versions of a PPM file. It was also able to generate a .ppm image, though it was just a red
+screen. It was also able to create both matrix and screen datatypes. It also gave extra methods like `draw_rectange()` and `draw_circle()`, the latter
+it was not able to finish due to hanging up." By Jaime
 
 #### Question 2
 What did ChatGPT get wrong?
